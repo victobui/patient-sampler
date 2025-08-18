@@ -1,0 +1,55 @@
+Patient ID: 615
+Name: Sarah Johnson
+Age: 32
+Date of Birth: 03/22/1992
+Medical Record Number: MRN-615-2024
+
+Chief Complaint: Severe abdominal pain and nausea
+
+History of Present Illness:
+32-year-old female presents with sudden onset severe right lower quadrant abdominal pain that started 6 hours ago. Pain is described as sharp, constant, and worsening. Associated with nausea, vomiting, and low-grade fever. Patient denies any urinary symptoms or vaginal discharge.
+
+Past Medical History:
+- No significant past medical history
+- No previous surgeries
+- No known allergies
+- Last menstrual period: 2 weeks ago (normal)
+
+Current Medications:
+- Oral contraceptive pills
+- Multivitamin
+
+Vital Signs:
+Blood pressure: 125/80 mmHg
+Heart rate: 110 bpm
+Respiratory rate: 18/min
+Temperature: 100.4°F (38°C)
+Oxygen saturation: 98% on room air
+
+Physical Examination:
+General: Alert and oriented, appears uncomfortable, mild distress
+Abdomen: Tender in right lower quadrant, positive McBurney's point tenderness, positive Rovsing's sign, guarding present
+Cardiovascular: Tachycardic, regular rhythm
+Pulmonary: Clear to auscultation bilaterally
+Genitourinary: Deferred due to abdominal pain
+
+Laboratory Results:
+WBC count: 14,500/μL (elevated)
+Neutrophils: 85% (elevated)
+Hemoglobin: 12.8 g/dL
+Platelets: 320,000/μL
+C-reactive protein: 15 mg/L (elevated)
+Urinalysis: Normal
+
+Imaging:
+CT scan abdomen/pelvis: Thickened appendiceal wall, periappendiceal fat stranding, small amount of free fluid in pelvis
+
+Assessment and Plan:
+Acute appendicitis
+1. NPO (nothing by mouth)
+2. IV fluids and electrolyte management
+3. Pain management with IV analgesics
+4. Antibiotic prophylaxis
+5. Urgent surgical consultation for laparoscopic appendectomy
+6. Pre-operative laboratory work and anesthesia consultation
+7. Patient education regarding procedure and post-operative care

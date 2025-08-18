@@ -1,0 +1,413 @@
+
+Language: English
+Here is the patient's data:
+---
+Custom Intakes:
+Here are the customer's latest custom intakes by type:
+
+Type: Greene Scale
+
+Question 1: Do you ever feel your heart beating quickly or pounding strongly?
+
+Answer: 0 - No, not at all (Does not affect me)
+
+Question 2: Do you feel tense or nervous?
+
+Answer: 1 - A little bit (Somewhat difficult)
+
+Question 3: Do you have difficulty sleeping? Either getting to sleep or waking up in the night.
+
+Answer: 1 - A little bit (Somewhat difficult)
+
+Question 4: Do you feel excitable?
+
+Answer: 0 - No, not at all (Does not affect me)
+
+Question 5: Are you anxious or experiencing panic attacks?
+
+Answer: 1 - A little bit (Somewhat difficult)
+
+Question 6: Do you have difficulties concentrating?
+
+Answer: 1 - A little bit (Somewhat difficult)
+
+Question 7: Are you feeling tired or lacking energy during the day?
+
+Answer: 0 - No, not at all (Does not affect me)
+
+Question 8: Are you experiencing a lack of interest in things and activities?
+
+Answer: 1 - A little bit (Somewhat difficult)
+
+Question 9: Do you feel unhappy or depressed?
+
+Answer: 0 - No, not at all (Does not affect me)
+
+Question 10: Are you experiencing crying spells?
+
+Answer: 0 - No, not at all (Does not affect me)
+
+Question 11: Are you irritable with your family, friends, or people you meet?
+
+Answer: 1 - A little bit (Somewhat difficult)
+
+Question 12: Do you feel dizzy or faint?
+
+Answer: 0 - No, not at all (Does not affect me)
+
+Question 13: Do you feel pressure or a tightness in your head?
+
+Answer: 0 - No, not at all (Does not affect me)
+
+Question 14: Do parts of your body feel numb?
+
+Answer: 0 - No, not at all (Does not affect me)
+
+Question 15: Are you experiencing headaches?
+
+Answer: 0 - No, not at all (Does not affect me)
+
+Question 16: Do you feel pains or aches in your muscles and/or joints?
+
+Answer: 2 - Quite a bit (It has affected my activities I need to do)
+
+Question 17: Do you experience a loss of feeling or numbness in your hands and feet?
+
+Answer: 0 - No, not at all (Does not affect me)
+
+Question 18: Do you have difficulties breathing?
+
+Answer: 0 - No, not at all (Does not affect me)
+
+Question 19: Are you experiencing hot flashes/flushes?
+
+Answer: 0 - No, not at all (Does not affect me)
+
+Question 20: Are you sweating at night?
+
+Answer: 1 - A little bit (Somewhat difficult)
+
+Question 21: Has your libido changed? Have you lost interest in sex?
+
+Answer: 1 - A little bit (Somewhat difficult)
+
+
+Type: Aches and Pains - Muscles Tension
+
+Question 1: What areas of the body are you experiencing discomfort (select all that apply)?
+
+Answer: 
+
+Question 2: Does the muscle tension/discomfort spread?
+
+Answer: 
+
+Question 3: On a scale of 0 to 3. How does your muscle tension affect your wellbeing and quality of life?
+
+Answer: 
+
+
+Type: Aches and Pains - Joint Pain
+
+Question 1: What areas of the body are you experiencing discomfort (select all that apply)?
+
+Answer: Back | Joints | Legs | Arms | Pelvic area
+
+Question 2: Does the joint pain/discomfort spread?
+
+Answer: No
+
+Question 3: On a scale of 0 to 3. How does your joint pain affect your wellbeing and quality of life?
+
+Answer: 2 - Moderate. It is difficult
+
+Question 4: How is your joint pain affecting your activities of daily living? (Washing, toileting, dressing, feeding, mobility)
+
+Answer: 1 - Low. Sometimes challenging
+
+Question 5: How is your joint pain affecting your relationship with family and/or friends?
+
+Answer: 0 - Not at all. Does not affect me/ not applicable
+
+Question 6: How is your joint pain affecting your job?
+
+Answer: 0 - Not at all. Does not affect me/ not applicable
+
+Question 7: How is your joint pain affecting your mood?
+
+Answer: 0 - Not at all. Does not affect me/ not applicable
+
+
+Type: Weight - Weight Gain
+
+Question 1: In the last 6 months, how much weight have you gained?
+
+Answer: 
+
+Question 2: Has there been any changes in diet in the last 6 months (select all that apply)?
+
+Answer: 
+
+Question 3: Which of the following best describes your physical activity or exercise level?
+
+Answer: 
+
+Question 4: On a scale of 0 to 3. How does your current weight challenges affect your wellbeing and quality of life?
+
+Answer: 
+
+
+Type: Sleep - Insomnia
+
+Question 1: Is trouble falling/staying asleep something new or has this been an ongoing challenge for you?
+
+Answer: 
+
+Question 2: How often do you wake up a night?
+
+Answer: 
+
+Question 3: What causes you to wake up during the night?
+
+Answer: 
+
+Question 4: On a scale of 0 to 3. How is your insomnia affecting your wellbeing and quality of life?
+
+Answer: 
+
+
+Type: Brain and Memory - Memory Lapses
+
+Question 1: Which of the following are you experiencing (select all that apply)?
+
+Answer: 
+
+Question 2: On a scale of 0 to 3. How do your memory  issues affect your wellbeing and quality of life?
+
+Answer: 
+
+
+Type: Brain and Memory - Concentration & Brain Fog
+
+Question 1: Which of the following are you experiencing (select all that apply)?
+
+Answer: 
+
+Question 2: Do any of the following apply to you (select all that apply)?
+
+Answer: 
+
+Question 3: On a scale of 0 to 3. How do your concentration/brain fog issues affect your wellbeing and quality of life?
+
+Answer: 
+
+Question 4: How is your concentration-brain fog affecting your activities of daily living? (Washing, toileting, dressing, feeding, mobility)
+
+Answer: 
+
+Question 5: How is your concentration-brain fog affecting your relationship with family and/or friends?
+
+Answer: 
+
+Question 6: How is your concentration-brain fog affecting your job?
+
+Answer: 
+
+Question 7: How is your concentration-brain fog affecting your mood?
+
+Answer: 
+
+
+Type: Mood and Emotions - Loss of Confidence
+
+Question 1: Has there been any recent events in your life that could be affecting your mental well-being (select all that apply)?
+
+Answer: Yes. Job | Yes. Move
+
+Question 2: On a scale of 0 to 3. How much does your current loss of confidence affect your wellbeing and quality of life?
+
+Answer: 1 - Low. Sometimes challenging
+
+
+Type: Mood and Emotions - Irritability
+
+Question 1: Has there been any recent events in your life that could be affecting your mental well-being (select all that apply)?
+
+Answer: 
+
+Question 2: On a scale of 0 to 3. How much does your irritability currently affect your wellbeing and quality of life?
+
+Answer: 
+
+
+Type: Skin, Hair, Nails and Body - Acne/Breakouts
+
+Question 1: Which of the following best describes your skin concerns (select all that apply)?
+
+Answer: 
+
+Question 2: Have you tried any of the following to address your acne/breakout concerns (select all that apply)?
+
+Answer: 
+
+Question 3: On a scale of 0 to 3. How do your acne/breakout concerns affect your wellbeing and quality of life?
+
+Answer: 
+
+
+Type: Skin, Hair, Nails and Body - Thinning Hair
+
+Question 1: Which one of the following best describes your hair?
+
+Answer: 
+
+Question 2: Which one of the following best describes the changes in facial and or body hair (select all that apply)?
+
+Answer: 
+
+Question 3: Do you have any of the following that might affect your hair quality (select all that apply)?
+
+Answer: 
+
+Question 4: On a scale of 0 to 3. How does your thinning hair affect your wellbeing and quality of life?
+
+Answer: 
+
+
+Type: Bladder Health - Bladder Weakness
+
+Question 1: What bladder related issues are you experiencing (select all that apply)?
+
+Answer: 
+
+Question 2: On a scale of 0 to 3. How do your bladder concerns affect your wellbeing and quality of life?
+
+Answer: 
+
+
+Type: Bladder Health - Urinary Tract Infections (UTIs)
+
+Question 1: When you have a UTI, what symptoms do you experience (select all that apply)?
+
+Answer: 
+
+Question 2: Which of the following recently apply to you (select all that apply)?
+
+Answer: 
+
+Question 3: On a scale of 0 to 3. How do your UTI concerns affect your wellbeing and quality of life?
+
+Answer: 
+
+
+Type: Sexual Health - Vaginal Dryness
+
+Question 1: During intercourse, what symptoms are you experiencing (select all that apply)?
+
+Answer: 
+
+Question 2: On a scale of 0 to 3. How does your current vaginal dryness affect your wellbeing and quality of life?
+
+Answer: 
+
+
+Type: Sleep - Tiredness & Fatigue
+
+Question 1: Which of the following best describes how you feel daily?
+
+Answer: 
+
+Question 2: On a scale of 0 to 3. How does your tiredness-fatigue affect your wellbeing and quality of life?
+
+Answer: 
+
+
+Type: Mood and Emotions - Anxiety, Stress & Panic Attacks
+
+Question 1: Has there been any recent events in your life that could be affecting your mental well-being (select all that apply)?
+
+Answer: 
+
+Question 2: On a scale of 0 to 3. How does your anxiety, stress and/or panic attacks affect your wellbeing and quality of life?
+
+Answer: 
+
+Question 3: How is your anxiety, stress and/or panic attacks affecting your activities of daily living? (Washing, toileting, dressing, feeding, mobility)
+
+Answer: 
+
+Question 4: How is your anxiety, stress and/or panic attacks affecting your relationship with family and/or friends?
+
+Answer: 
+
+Question 5: How is your anxiety, stress and/or panic attacks affecting your job?
+
+Answer: 
+
+Question 6: How is your anxiety, stress and/or panic attacks affecting your mood?
+
+Answer: 
+
+
+
+---
+Symptoms:
+(1). Muscles Tension
+
+(2). Joint Pain
+
+(3). Weight Gain
+
+(4). Insomnia
+
+(5). Memory Lapses
+
+(6). Concentration - Brain Fog
+
+(7). Loss of Confidence
+
+(8). Irritability
+
+(9). Acne/Breakouts
+
+(10). Thinning Hair
+
+(11). Bladder Weakness
+
+(12). Urinary Tract Infections (UTIs)
+
+(13). Libido - Sexual Desire
+
+(14). Vaginal Dryness
+
+
+---
+Goals:
+(1). Exercises to increase my muscle mass and/or flexibility 
+
+(2). Wake up without stiff joints  
+
+(3). Be my biggest advocate daily 
+
+(4). Loss of Confidence - Other: Improve my confidence in my ability to do new/hard things and improve my resiliency 
+
+(5). Tips and techniques to help increase my libido/sexual desire 
+
+(6). To feel like I am desirable and sexual again 
+
+(7). Exercises to increase my muscle mass and/or flexibility 
+
+(8). Wake up without stiff joints  
+
+(9). Spend a day with a clear head 
+
+(10). Have a day where I retain and complete everything I set-out to do 
+
+(11). Be my biggest advocate daily 
+
+(12). Tips and techniques to manage my emotions 
+
+---
+Latest Advanced Medical Profile (PHP Serialized):
+a:126:{s:17:"AMP_BloodPressure";s:0:"";s:17:"AMP_LastBloodWork";s:0:"";s:25:"AMP_BloodworkHormonePanel";s:1:"0";s:16:"AMP_BloodworkB12";s:1:"0";s:21:"AMP_BloodworkVitaminD";s:1:"0";s:21:"AMP_BloodworkFerritin";s:1:"0";s:20:"AMP_BloodworkThyroid";s:1:"0";s:27:"AMP_BloodworkCortisolLevels";s:1:"0";s:20:"AMP_BloodworkInsulin";s:1:"0";s:16:"AMP_BloodworkFSH";s:1:"0";s:22:"AMP_BloodworkEstradiol";s:1:"0";s:25:"AMP_BloodworkDontRemember";i:0;s:18:"AMP_OtherBloodWork";s:0:"";s:20:"AMP_LastPhysicalExam";s:0:"";s:26:"AMP_NoPreExistingCondition";s:1:"0";s:13:"AMP_Alzheimer";s:1:"0";s:10:"AMP_Anemia";s:1:"0";s:13:"AMP_Arthritis";s:1:"0";s:10:"AMP_Cancer";s:1:"0";s:10:"AMP_Celiac";s:1:"0";s:26:"AMP_ChronicFatigueSyndrome";s:1:"0";s:22:"AMP_CirculationDisease";s:1:"0";s:11:"AMP_Colitis";s:1:"0";s:12:"AMP_Dementia";i:0;s:12:"AMP_Diabetes";s:1:"0";s:14:"AMP_Gallstones";s:1:"0";s:16:"AMP_HeartDisease";s:1:"0";s:21:"AMP_HighBloodPressure";s:1:"0";s:19:"AMP_HighCholesterol";s:1:"0";s:19:"AMP_Hyperthyroidism";s:1:"0";s:18:"AMP_Hypothyroidism";s:1:"0";s:28:"AMP_InflammatoryBowelDisease";s:1:"0";s:26:"AMP_IrritableBowelSyndrome";i:0;s:21:"AMP_JointInflammation";s:1:"0";s:17:"AMP_KidneyDisease";s:1:"0";s:16:"AMP_KidneyStones";i:0;s:16:"AMP_LiverDisease";s:1:"0";s:20:"AMP_LowBloodPressure";i:0;s:16:"AMP_Osteoporosis";s:1:"0";s:23:"AMP_PelvicOrganProlapse";s:1:"0";s:22:"AMP_RespiratoryDisease";s:1:"0";s:10:"AMP_Stroke";i:0;s:12:"AMP_Tinnitus";s:1:"0";s:11:"AMP_Vertigo";i:0;s:18:"AMP_OtherCondition";s:0:"";s:20:"AMP_NoMentalDisorder";s:1:"0";s:14:"AMP_Depression";s:1:"0";s:11:"AMP_Anxiety";s:1:"0";s:22:"AMP_AlcoholUseDisorder";s:1:"0";s:18:"AMP_EatingDisorder";s:1:"0";s:11:"AMP_Bipolar";s:1:"0";s:8:"AMP_PTSD";s:1:"0";s:8:"AMP_ADHD";s:1:"0";s:24:"AMP_SubstanceUseDisorder";s:1:"0";s:14:"AMP_Borderline";s:1:"0";s:17:"AMP_PanicDisorder";s:1:"0";s:24:"AMP_OtherMentalCondition";s:0:"";s:14:"AMP_NoMedicine";s:1:"0";s:18:"AMP_Antidepressant";s:1:"0";s:15:"AMP_AntiAnxiety";s:1:"0";s:17:"AMP_Antipsychotic";s:1:"0";s:19:"AMP_Corticosteroids";s:1:"0";s:23:"AMP_DiabetesMedications";s:1:"0";s:13:"AMP_Diuretics";s:1:"0";s:29:"AMP_HormoneReplacementTherapy";s:1:"0";s:18:"AMP_MoodStabilizer";s:1:"0";s:21:"AMP_SeizureMedication";s:1:"0";s:9:"AMP_SSRIs";s:1:"0";s:13:"AMP_Stimulant";s:1:"0";s:19:"AMP_OtherMedication";s:0:"";s:9:"AMP_Smoke";i:0;s:18:"AMP_SmokeFrequency";s:0:"";s:21:"AMP_DontUseCigarretes";i:0;s:8:"AMP_Vape";i:0;s:17:"AMP_NicotineOther";i:0;s:11:"AMP_Alcohol";i:0;s:20:"AMP_AlcoholFrequency";s:0:"";s:9:"AMP_Drugs";i:0;s:18:"AMP_DrugsFrequency";s:0:"";s:14:"AMP_WakeUpTime";s:0:"";s:17:"AMP_WakeUpRefresh";s:0:"";s:18:"AMP_DayEnergyLevel";s:0:"";s:21:"AMP_AveragEnergyLevel";s:0:"";s:9:"AMP_Snore";s:0:"";s:18:"AMP_WeaklyExercise";s:0:"";s:14:"AMP_NoExercise";s:1:"0";s:11:"AMP_Walking";s:1:"0";s:8:"AMP_Yoga";s:1:"0";s:11:"AMP_Pilates";s:1:"0";s:25:"AMP_HighIntensityTraining";s:1:"0";s:18:"AMP_WeightTraining";s:1:"0";s:11:"AMP_Running";s:1:"0";s:21:"AMP_FeelAfterExercise";s:0:"";s:16:"AMP_StressRating";s:0:"";s:19:"AMP_StresCopingTalk";s:1:"0";s:20:"AMP_StresCopingDrink";s:1:"0";s:20:"AMP_StresCopingSleep";s:1:"0";s:18:"AMP_StresCopingEat";s:1:"0";s:18:"AMP_StresCopingCry";s:1:"0";s:26:"AMP_StresCopingCancelPlans";s:1:"0";s:24:"AMP_StresCopingIsolation";s:1:"0";s:23:"AMP_StresCopingExercise";s:1:"0";s:23:"AMP_StresCopingShopping";s:1:"0";s:22:"AMP_StresCopingNothing";s:1:"0";s:20:"AMP_StresCopingOther";s:0:"";s:16:"AMP_SexFrequency";s:0:"";s:22:"AMP_MenopauseKnowledge";s:0:"";s:18:"AMP_HormoneTherapy";s:0:"";s:28:"AMP_HormoneTherapyMedication";s:0:"";s:21:"AMP_HormoneTherapyYes";s:0:"";s:21:"AMP_HormoneTherapyWas";s:0:"";s:26:"AMP_HormoneTherapyWasOther";s:0:"";s:18:"AMP_FirstPeriodAge";s:0:"";s:15:"AMP_LastPAPTest";s:0:"";s:19:"AMP_HystoryOfCancer";s:0:"";s:17:"AMP_LastMammogram";s:0:"";s:22:"AMP_LastSelfBreastExam";s:0:"";s:17:"AMP_ClinicalTrial";s:0:"";s:23:"AMP_ClinicalTrialReason";s:0:"";s:39:"AMP_EndometriosisFibroidsPainfulPeriods";s:1:"0";s:12:"AMP_Cystitis";s:1:"0";s:13:"AMP_Migraines";s:1:"0";s:17:"AMP_PeanutAllergy";s:1:"0";s:10:"AMP_Asthma";s:1:"0";s:32:"AMP_SkinLesionsFrecklingSunspots";s:1:"0";s:12:"AMP_Alopecia";s:1:"0";}
+---

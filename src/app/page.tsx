@@ -22,6 +22,11 @@ interface SearchResponse {
     snippet: string;
   }>;
   fileContent?: string;
+  metadata?: {
+    originalTokens?: number;
+    processedTokens?: number;
+    summarized?: boolean;
+  };
 }
 
 export default function Home() {
@@ -218,6 +223,23 @@ export default function Home() {
                     <p><strong>Prompt Tokens:</strong> {results.usage.prompt_tokens}</p>
                     <p><strong>Completion Tokens:</strong> {results.usage.completion_tokens}</p>
                     <p><strong>Total Tokens:</strong> {results.usage.total_tokens}</p>
+                    {results.metadata?.summarized && (
+                      <div className="mt-2 p-2 bg-blue-100 rounded">
+                        <p className="text-blue-800">
+                          <strong>Auto-Summarization Applied:</strong> Patient data was summarized to prevent truncation.
+                        </p>
+                        {results.metadata.originalTokens && results.metadata.processedTokens && (
+                          <p className="text-sm text-blue-600 mt-1">
+                            Reduced from {results.metadata.originalTokens} to {results.metadata.processedTokens} tokens
+                          </p>
+                        )}
+                      </div>
+                    )}
+                    {results.usage.total_tokens > 10000 && !results.metadata?.summarized && (
+                      <p className="text-amber-600 mt-2">
+                        <strong>Note:</strong> Large token usage detected. Content may have been summarized to prevent truncation.
+                      </p>
+                    )}
                   </div>
                 </div>
 

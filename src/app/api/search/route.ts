@@ -27,6 +27,39 @@ const client = new OpenAI({
   baseURL: "https://api.perplexity.ai"
 });
 
+// Rough token estimation function (1 token ≈ 4 characters for most text)
+function estimateTokens(text: string): number {
+  return Math.ceil(text.length / 4);
+}
+
+// Function to summarize patient data if it's too long
+async function summarizePatientData(fileContent: string): Promise<string> {
+  try {
+    const summaryResponse = await client.chat.completions.create({
+      model: "sonar-pro",
+      messages: [
+        {
+          role: "system",
+          content: "You are a medical AI assistant. Create a comprehensive but concise summary of the following patient medical information. Preserve all critical medical details, diagnoses, medications, procedures, and key findings while reducing the overall length."
+        },
+        {
+          role: "user",
+          content: `Please summarize this patient medical information:\n\n${fileContent}`
+        }
+      ],
+      temperature: 0.1,
+      max_tokens: 1500,
+      stream: false
+    });
+
+    return summaryResponse.choices[0].message.content || fileContent;
+  } catch (error) {
+    console.error('Patient data summarization error:', error);
+    // Fallback: return original content if summarization fails
+    return fileContent;
+  }
+}
+
 export async function POST(request: NextRequest) {
   try {
     const { searchTerm, systemPrompt } = await request.json();
@@ -64,8 +97,18 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Check if patient data is too long and summarize if needed
+    const maxPatientDataTokens = 8000; // Reserve space for other content
+    const estimatedTokens = estimateTokens(fileContent);
+    
+    let processedPatientData = fileContent;
+    if (estimatedTokens > maxPatientDataTokens) {
+      console.log(`Patient data too long (${estimatedTokens} tokens), summarizing...`);
+      processedPatientData = await summarizePatientData(fileContent);
+    }
+
     // Prepare the prompt for Perplexity AI
-    const userPrompt = `generate a Patient summary based on the following information: ${fileContent}`;
+    const userPrompt = `generate a Patient summary based on the following information: ${processedPatientData}`;
 
     // Call Perplexity AI with proper typing
     const requestBody = {
@@ -98,7 +141,12 @@ export async function POST(request: NextRequest) {
       model: response.model,
       usage: response.usage || { prompt_tokens: 0, completion_tokens: 0, total_tokens: 0 },
       search_results: response.search_results || [],
-      fileContent: fileContent // Include the original file content for chat context
+      fileContent: processedPatientData, // Use processed (potentially summarized) data for chat context
+      metadata: {
+        originalTokens: estimateTokens(fileContent),
+        processedTokens: estimateTokens(processedPatientData),
+        summarized: estimatedTokens > maxPatientDataTokens
+      }
     };
 
     return NextResponse.json(result);

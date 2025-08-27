@@ -39,6 +39,8 @@ export default function Home() {
   const [currentMessage, setCurrentMessage] = useState('');
   const [chatLoading, setChatLoading] = useState(false);
   const [patientContext, setPatientContext] = useState<string>('');
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const chatMessagesRef = useRef<HTMLDivElement>(null);
 
   // Scroll to bottom when new messages are added
@@ -47,6 +49,55 @@ export default function Home() {
       chatMessagesRef.current.scrollTop = chatMessagesRef.current.scrollHeight;
     }
   }, [chatMessages]);
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      setSelectedFile(e.target.files[0]);
+      // Clear search term if a file is selected
+      setSearchTerm('');
+    }
+  };
+
+  const handleUploadAndAnalyze = async () => {
+    if (!selectedFile) {
+      setError('Please select a file to upload.');
+      return;
+    }
+
+    setLoading(true);
+    setError('');
+    setResults(null);
+    setChatMessages([]);
+
+    const formData = new FormData();
+    formData.append('file', selectedFile);
+    formData.append('systemPrompt', systemPrompt);
+
+    try {
+      const response = await fetch('/api/files', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to analyze file');
+      }
+
+      const data = await response.json();
+      setResults(data);
+      setPatientContext(data.fileContent || '');
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred during file analysis');
+    } finally {
+      setLoading(false);
+      // Reset file input
+      if (fileInputRef.current) {
+        fileInputRef.current.value = '';
+      }
+      // Do not reset selectedFile state here to show the file name in results
+    }
+  };
 
   const handleSearch = async () => {
     if (!searchTerm.trim()) {
@@ -58,6 +109,11 @@ export default function Home() {
     setError('');
     setResults(null);
     setChatMessages([]);
+    // Clear file selection if a search is performed
+    setSelectedFile(null);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
 
     try {
       const response = await fetch('/api/search', {
@@ -159,9 +215,30 @@ export default function Home() {
                 type="text"
                 id="search"
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={(e) => {
+                  setSearchTerm(e.target.value);
+                  // Clear file selection when typing a search term
+                  if (fileInputRef.current) fileInputRef.current.value = '';
+                  setSelectedFile(null);
+                }}
                 placeholder="Enter file number (e.g., 614)"
                 className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                disabled={loading}
+              />
+            </div>
+
+            <div className="text-center my-2 text-sm text-gray-500">OR</div>
+
+            <div>
+              <label htmlFor="file-upload" className="block text-sm font-medium text-gray-700 mb-2">
+                Upload a file to analyze
+              </label>
+              <input
+                id="file-upload"
+                ref={fileInputRef}
+                type="file"
+                onChange={handleFileChange}
+                className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
                 disabled={loading}
               />
             </div>
@@ -181,13 +258,22 @@ export default function Home() {
               />
             </div>
 
-            <button
-              onClick={handleSearch}
-              disabled={loading}
-              className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {loading ? 'Processing...' : 'Generate Patient Summary'}
-            </button>
+            <div className="flex space-x-4">
+              <button
+                onClick={handleSearch}
+                disabled={loading || !searchTerm.trim()}
+                className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {loading && searchTerm ? 'Processing...' : 'Generate Summary from Search'}
+              </button>
+              <button
+                onClick={handleUploadAndAnalyze}
+                disabled={loading || !selectedFile}
+                className="flex-1 bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {loading && selectedFile ? 'Uploading...' : 'Analyze Uploaded File'}
+              </button>
+            </div>
           </div>
         </div>
 
@@ -209,6 +295,15 @@ export default function Home() {
                     <p className="whitespace-pre-wrap">{results.content}</p>
                   </div>
                 </div>
+
+                {selectedFile && (
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900 mb-2">Analyzed File</h3>
+                    <div className="bg-gray-50 p-4 rounded-md">
+                      <p><strong>File Name:</strong> {selectedFile.name}</p>
+                    </div>
+                  </div>
+                )}
 
                 <div>
                   <h3 className="text-lg font-medium text-gray-900 mb-2">Model Information</h3>
